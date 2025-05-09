@@ -1,0 +1,44 @@
+<form #form="ngForm" (submit)="onSubmit(form)" 
+[class.submitted]="service.formSubmitted" novalidate autocomplete="off">
+    <input type="hidden" name="employeeId" [value]="service.formData.employeeId"> 
+    <div class="mb-3">
+        <label> </label>
+        <input class="form-control form-control-lg" 
+        placeholder="First Name"
+        #firstName="ngModel" name="firstName"
+        [(ngModel)]="service.formData.firstName"
+        required>
+    </div>
+      <div class="mb-3">
+        <label> </label>
+        <input class="form-control form-control-lg" 
+        placeholder="Last Name"
+        #firstName="ngModel" name="lastName"
+        [(ngModel)]="service.formData.lastName"
+        required>
+    </div>
+      <div class="row">
+        <div class="mb-3 col-6">
+        <label> </label>
+        <input class="form-control form-control-lg" 
+        placeholder="Department"
+        #firstName="ngModel" name="department"
+        [(ngModel)]="service.formData.department"
+        required>
+    </div>
+      <div class="mb-3 col-6">
+        <label> </label>
+        <input class="form-control form-control-lg" 
+        placeholder="Salary"
+        #firstName="ngModel" name="salary"
+        [(ngModel)]="service.formData.salary"
+        required>
+    </div>
+      </div>
+
+    <div class="d-grid">
+        <button class="btn btn-lg btn-success" type="submit">
+            Submit
+        </button>
+    </div>
+</form>
